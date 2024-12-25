@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { FsButton } from "fs-ui";
 import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
@@ -23,7 +24,7 @@ import HelloWorld from "./components/HelloWorld.vue";
   </div>
 
   <HelloWorld msg="Vite + Vue" />
-  <FsButton />
+  <FsButton :type="'primary'">test</FsButton>
 </template>
 
 <style scoped>

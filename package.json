@@ -8,7 +8,7 @@
     "docs:dev": "pnpm --filter @fs-ui/docs dev",
     "docs:build": "pnpm --filter @fs-ui/docs build",
     "docs:preview": "pnpm --filter @fs-ui/docs preview",
-    "test": "echo 'todo'"
+    "test": "pnpm --filter @fs-ui/components test"
   },
   "keywords": [
     "fs",
