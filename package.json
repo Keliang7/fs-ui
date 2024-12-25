@@ -1,13 +1,21 @@
 {
   "name": "@fs-ui/workspace",
   "version": "1.0.0",
-  "description": "",
+  "description": "fs组件库",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm --filter @fs-ui/play dev",
+    "docs:dev": "pnpm --filter @fs-ui/docs dev",
+    "docs:build": "pnpm --filter @fs-ui/docs build",
+    "docs:preview": "pnpm --filter @fs-ui/docs preview",
+    "test": "echo 'todo'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "fs",
+    "fs组件库",
+    "components"
+  ],
+  "author": "keliang127@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@types/lodash-es": "^4.17.12",
@@ -28,10 +36,10 @@
   "dependencies": {
     "lodash-es": "^4.17.21",
     "vue": "^3.4.19",
-    "fs-ui":"workspace:*",
-    "@fs-ui/components":"workspace:*",
-    "@fs-ui/hooks":"workspace:*",
-    "@fs-ui/utils":"workspace:*",
-    "@fs-ui/theme":"workspace:*"
+    "fs-ui": "workspace:*",
+    "@fs-ui/components": "workspace:*",
+    "@fs-ui/hooks": "workspace:*",
+    "@fs-ui/utils": "workspace:*",
+    "@fs-ui/theme": "workspace:*"
   }
 }
