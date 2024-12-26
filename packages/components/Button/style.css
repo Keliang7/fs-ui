@@ -1,0 +1,199 @@
+.fs-button-group {
+  --fs-button-group-border-color: var(--fs-border-color-lighter);
+}
+.fs-button {
+  --fs-button-font-weight: var(--fs-font-weight-primary);
+  --fs-button-border-color: var(--fs-border-color);
+  --fs-button-bg-color: var(--fs-fill-color-blank);
+  --fs-button-text-color: var(--fs-text-color-regular);
+  --fs-button-disabled-text-color: var(--fs-disabled-text-color);
+  --fs-button-disabled-bg-color: var(--fs-fill-color-blank);
+  --fs-button-disabled-border-color: var(--fs-border-color-light);
+  --fs-button-hover-text-color: var(--fs-color-primary);
+  --fs-button-hover-bg-color: var(--fs-color-primary-light-9);
+  --fs-button-hover-border-color: var(--fs-color-primary-light-7);
+  --fs-button-active-text-color: var(--fs-button-hover-text-color);
+  --fs-button-active-border-color: var(--fs-color-primary);
+  --fs-button-active-bg-color: var(--fs-button-hover-bg-color);
+  --fs-button-outline-color: var(--fs-color-primary-light-5);
+  --fs-button-active-color: var(--fs-text-color-primary);
+}
+
+.fs-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  height: 32px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: var(--fs-button-text-color);
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: var(--fs-button-font-weight);
+  user-select: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: var(--fs-button-bg-color);
+  border: var(--fs-border);
+  border-color: var(--fs-button-border-color);
+  padding: 8px 15px;
+  font-size: var(--fs-font-size-base);
+  border-radius: var(--fs-border-radius-base);
+  & + & {
+    margin-left: 12px;
+  }
+  &:hover,
+  &:focus {
+    color: var(--fs-button-hover-text-color);
+    border-color: var(--fs-button-hover-border-color);
+    background-color: var(--fs-button-hover-bg-color);
+    outline: none;
+  }
+  &:active {
+    color: var(--fs-button-active-text-color);
+    border-color: var(--fs-button-active-border-color);
+    background-color: var(--fs-button-active-bg-color);
+    outline: none;
+  }
+  /*plain*/
+  &.is-plain {
+    --fs-button-hover-text-color: var(--fs-color-primary);
+    --fs-button-hover-bg-color: var(--fs-fill-color-blank);
+    --fs-button-hover-border-color: var(--fs-color-primary);
+  }
+  /*round*/
+  &.is-round {
+    border-radius: var(--fs-border-radius-round);
+  }
+  /*circle*/
+  &.is-circle {
+    border-radius: 50%;
+    padding: 8px;
+  }
+  /*disabled*/
+  &.is-loading,
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus,
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    color: var(--fs-button-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+    background-color: var(--fs-button-disabled-bg-color);
+    border-color: var(--fs-button-disabled-border-color);
+  }
+  [class*="fs-icon"] {
+    width: 1em;
+    height: 1em;
+  }
+}
+@each $val in primary, success, warning, info, danger {
+  .fs-button--$(val) {
+    --fs-button-text-color: var(--fs-color-white);
+    --fs-button-bg-color: var(--fs-color-$(val));
+    --fs-button-border-color: var(--fs-color-$(val));
+    --fs-button-outline-color: var(--fs-color-$(val)-light-5);
+    --fs-button-active-color: var(--fs-color-$(val)-dark-2);
+    --fs-button-hover-text-color: var(--fs-color-white);
+    --fs-button-hover-bg-color: var(--fs-color-$(val)-light-3);
+    --fs-button-hover-border-color: var(--fs-color-$(val)-light-3);
+    --fs-button-active-bg-color: var(--fs-color-$(val)-dark-2);
+    --fs-button-active-border-color: var(--fs-color-$(val)-dark-2);
+    --fs-button-disabled-text-color: var(--fs-color-white);
+    --fs-button-disabled-bg-color: var(--fs-color-$(val)-light-5);
+    --fs-button-disabled-border-color: var(--fs-color-$(val)-light-5);
+  }
+  .fs-button--$(val).is-plain {
+    --fs-button-text-color: var(--fs-color-$(val));
+    --fs-button-bg-color: var(--fs-color-$(val)-light-9);
+    --fs-button-border-color: var(--fs-color-$(val)-light-5);
+    --fs-button-hover-text-color: var(--fs-color-white);
+    --fs-button-hover-bg-color: var(--fs-color-$(val));
+    --fs-button-hover-border-color: var(--fs-color-$(val));
+    --fs-button-active-text-color: var(--fs-color-white);
+
+    --fs-button-disabled-text-color: var(--fs-color-$(val)-light-5);
+    --fs-button-disabled-bg-color: var(--fs-color-$(val)-light-9);
+    --fs-button-disabled-border-color: var(--fs-color-$(val)-light-8);
+  }
+}
+.fs-button--large {
+  --fs-button-size: 40px;
+  height: var(--fs-button-size);
+  padding: 12px 19px;
+  font-size: var(--fs-font-size-base);
+  border-radius: var(--fs-border-radius-base);
+  /*circle*/
+  &.is-circle {
+    border-radius: 50%;
+    padding: 12px;
+  }
+}
+.fs-button--small {
+  --fs-button-size: 24px;
+  height: var(--fs-button-size);
+  padding: 5px 11px;
+  font-size: 12px;
+  border-radius: calc(var(--fs-border-radius-base) - 1px);
+  /*circle*/
+  &.is-circle {
+    border-radius: 50%;
+    padding: 5px;
+  }
+  [class*="fs-icon"] {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.fs-button-group {
+  display: inline-block;
+  vertical-align: middle;
+
+  &::after {
+    clear: both;
+  }
+  & > :deep(.fs-button) {
+    float: left;
+    position: relative;
+    margin-left: 0;
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right-color: var(--fs-button-group-border-color);
+    }
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left-color: var(--fs-button-group-border-color);
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+
+      border-left-color: var(--fs-button-group-border-color);
+      border-right-color: var(--fs-button-group-border-color);
+    }
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+    &:first-child:last-child {
+      border-top-right-radius: var(--fs-border-radius-base);
+      border-bottom-right-radius: var(--fs-border-radius-base);
+      border-top-left-radius: var(--fs-border-radius-base);
+      border-bottom-left-radius: var(--fs-border-radius-base);
+
+      &.is-round {
+        border-radius: var(--fs-border-radius-round);
+      }
+
+      &.is-circle {
+        border-radius: 50%;
+      }
+    }
+  }
+}
