@@ -13,7 +13,7 @@ describe("Button.vue", () => {
       const wrapper = mount(Button, {
         props: { type: type as any },
       });
-      expect(wrapper.classes()).toContain(`er-button--${type}`);
+      expect(wrapper.classes()).toContain(`fs-button--${type}`);
     });
   });
 
@@ -24,7 +24,7 @@ describe("Button.vue", () => {
       const wrapper = mount(Button, {
         props: { size: size as any },
       });
-      expect(wrapper.classes()).toContain(`er-button--${size}`);
+      expect(wrapper.classes()).toContain(`fs-button--${size}`);
     });
   });
 
@@ -121,7 +121,7 @@ describe("Button.vue", () => {
   //     ));
 
   //     // class
-  //     expect(wrapper.classes()).toContain("er-button--primary");
+  //     expect(wrapper.classes()).toContain("fs-button--primary");
 
   //     // slot
   //     expect(wrapper.get("button").text()).toBe("button content");
@@ -211,7 +211,7 @@ describe("Button.vue", () => {
 //       </ButtonGroup>
 //     ));
 
-//     expect(wrapper.classes()).toContain("er-button-group");
+//     expect(wrapper.classes()).toContain("fs-button-group");
 //   });
 
 //   test("button group size", () => {
@@ -225,7 +225,7 @@ describe("Button.vue", () => {
 //       ));
 
 //       const buttonWrapper = wrapper.findComponent(Button);
-//       expect(buttonWrapper.classes()).toContain(`er-button--${size}`);
+//       expect(buttonWrapper.classes()).toContain(`fs-button--${size}`);
 //     });
 //   });
 
@@ -240,7 +240,7 @@ describe("Button.vue", () => {
 //       ));
 
 //       const buttonWrapper = wrapper.findComponent(Button);
-//       expect(buttonWrapper.classes()).toContain(`er-button--${type}`);
+//       expect(buttonWrapper.classes()).toContain(`fs-button--${type}`);
 //     });
 //   });
 
