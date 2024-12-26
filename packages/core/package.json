@@ -1,9 +1,28 @@
 {
   "name": "fs-ui",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "components library by Vue3 + TS",
   "type": "module",
+  "main": "./dist/umd/index.umd.cjs",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/core/index.d.ts",
+  "file": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.js",
+      "require": "./dist/umd/index.umd.js",
+      "types": "./dist/types/core/index.d.ts"
+    },
+    "./dist/": {
+      "import": "./dist/",
+      "require": "./dist/"
+    }
+  },
+  "sideEffects": [
+    "./dist/index.css"
+  ],
   "scripts": {
     "build": "run-s build-only move-style",
     "build-only": "run-p build-es build-umd",
@@ -15,9 +34,17 @@
   "author": "keliang127@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "@fs-ui/components": "workspace:*"
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@popperjs/core": "^2.11.8",
+    "async-validator": "^4.2.5"
   },
   "devDependencies": {
+    "@fs-ui/components": "workspace:*",
     "vite-plugin-dts": "^3.9.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.19"
   }
 }
