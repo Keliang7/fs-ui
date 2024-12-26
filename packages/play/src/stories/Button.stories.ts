@@ -1,5 +1,5 @@
 import type { Meta, StoryObj, ArgTypes } from "@storybook/vue3";
-import { fn } from "@storybook/test";
+import { fn, within, userEvent, expect } from "@storybook/test";
 
 import { FsButton } from "fs-ui";
 
@@ -73,6 +73,13 @@ export const Default: Story & { args: { content: string } } = {
     },
     template: container(`<fs-button  v-bind="args">{{args.content}}</-button>`),
   }),
+  play: async ({ canvasElement, args, step }) => {
+    const canvas = within(canvasElement);
+    await step("click btn", async () => {
+      await userEvent.click(await canvas.findByRole("button"));
+    });
+    expect(args.onClick).toHaveBeenCalled();
+  },
 };
 
 export default meta;

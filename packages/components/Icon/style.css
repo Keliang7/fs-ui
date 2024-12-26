@@ -1,0 +1,16 @@
+.fs-icon {
+  --fs-icon-color: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--fs-icon-color);
+  font-size: inherit;
+}
+
+@each $val in primary, info, success, warning, danger {
+  .fs-icon--$(val) {
+    --fs-icon-color: var(--fs-color-$(val));
+  }
+}
