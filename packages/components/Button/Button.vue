@@ -2,7 +2,7 @@
 import { ref, computed } from "vue";
 import type { ButtonProps, ButtonEmits, ButtonInstance } from "./types";
 import { throttle } from "lodash-es";
-import FsIcon from "../Icon/Icon.vue";
+// import FsIcon from "../Icon/Icon.vue";
 
 defineOptions({
   name: "FsButton",
@@ -49,18 +49,18 @@ defineExpose<ButtonInstance>({
     @click="(e:MouseEvent)=>useThrottle?handleBtnClickThrottle(e):handleBtnClick(e)">
     <template v-if="loading">
       <slot name="loading">
-        <FsIcon
+        <!-- <FsIcon
           class="loading-icon"
           :icon="loadingIcon ?? 'spinner'"
           :style="iconStyle"
-          spin />
+          spin /> -->
       </slot>
     </template>
-    <FsIcon
+    <!-- <FsIcon
       v-if="icon && !loading"
       :icon="icon"
       :style="iconStyle"
-      size="1x" />
+      size="1x" /> -->
     <slot></slot>
   </component>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FsButton } from "fs-ui";
+import { FsIcon, FsButton } from "fs-ui";
 </script>
 
 <template>
@@ -8,4 +8,5 @@ import { FsButton } from "fs-ui";
     size="large"
     >test</FsButton
   >
+  <FsIcon icon="spinner"></FsIcon>
 </template>
