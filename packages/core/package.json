@@ -3,13 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "run-s build-only move-style",
+    "build-only": "run-p build-es build-umd",
+    "build-umd": "vite build --config vite.umd.config.ts",
+    "build-es": "vite build --config vite.es.config.ts",
+    "move-style": "move-file dist/es/index.css dist/index.css"
   },
   "keywords": [],
-  "author": "",
+  "author": "keliang127@gmail.com",
   "license": "ISC",
   "dependencies": {
     "@fs-ui/components": "workspace:*"
+  },
+  "devDependencies": {
+    "vite-plugin-dts": "^3.9.1"
   }
 }
