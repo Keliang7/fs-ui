@@ -4,9 +4,8 @@ import { FsIcon, FsButton } from "fs-ui";
 
 <template>
   <FsButton
-    type="danger"
-    size="large"
+    :type="'primary'"
+    :loading="true"
     >test</FsButton
   >
-  <FsIcon icon="spinner"></FsIcon>
 </template>

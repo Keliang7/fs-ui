@@ -37,8 +37,6 @@
 
 # 背景
 
-（项目文档地址：https://ericwxy.github.io/eric-ui/components/button.html ）
-
 首次可补充提问来完善背景
 
 # 输出规范

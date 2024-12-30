@@ -1,4 +1,4 @@
-import type { Component, ComputedRef, Ref } from "vue";
+import type { Component, Ref } from "vue";
 
 export type ButtonType = "primary" | "success" | "warning" | "danger" | "info";
 export type NativeType = "button" | "reset" | "submit";
