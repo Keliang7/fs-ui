@@ -23,7 +23,6 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "env.d.ts",
     "packages/core/index.ts",
     "packages/hooks/**/*.ts",
     "packages/utils/**/*.ts",

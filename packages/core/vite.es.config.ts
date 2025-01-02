@@ -3,7 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 import { resolve } from "path";
 
-const COMP_NAME = ["Button", "Icon"]as const
+const COMP_NAME = ["Button", "Icon"] as const;
 
 export default defineConfig({
   plugins: [
