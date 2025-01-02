@@ -4,8 +4,8 @@
   "description": "fs组件库",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter @fs-ui/play dev",
-    "storybook": "pnpm --filter @fs-ui/play storybook",
+    "dev": "pnpm run build && pnpm --filter @fs-ui/play dev",
+    "storybook": "pnpm run build && pnpm --filter @fs-ui/play storybook",
     "docs:dev": "pnpm --filter @fs-ui/docs dev",
     "docs:build": "pnpm --filter @fs-ui/docs build",
     "docs:preview": "pnpm --filter @fs-ui/docs preview",
