@@ -1,12 +1,12 @@
 {
-  "name": "fs-ui",
+  "name": "keliang-ui",
   "version": "1.0.0",
   "description": "components library by Vue3 + TS",
   "type": "module",
   "main": "./dist/umd/index.umd.cjs",
   "module": "./dist/es/index.js",
   "types": "./dist/types/core/index.d.ts",
-  "file": [
+  "files": [
     "dist"
   ],
   "exports": {
@@ -41,7 +41,7 @@
     "async-validator": "^4.2.5"
   },
   "devDependencies": {
-    "@fs-ui/components": "workspace:*",
+    "@keliang-ui/components": "workspace:*",
     "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {

@@ -2,9 +2,9 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Fs-Ui",
-  description: "fs组件库",
-  base: "/fs-ui/",
+  title: "Keliang-UI",
+  description: "keliang组件库",
+  base: "/keliang-ui/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

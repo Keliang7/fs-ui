@@ -1,16 +1,16 @@
 {
-  "name": "@fs-ui/workspace",
+  "name": "@keliang-ui/workspace",
   "version": "1.0.0",
   "description": "fs组件库",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm run build && pnpm --filter @fs-ui/play dev",
-    "storybook": "pnpm run build && pnpm --filter @fs-ui/play storybook",
-    "docs:dev": "pnpm --filter @fs-ui/docs dev",
-    "docs:build": "pnpm --filter @fs-ui/docs build",
-    "docs:preview": "pnpm --filter @fs-ui/docs preview",
-    "test": "pnpm --filter @fs-ui/components test",
-    "build": "pnpm --filter fs-ui build"
+    "dev": "pnpm run build && pnpm --filter @keliang-ui/play dev",
+    "storybook": "pnpm run build && pnpm --filter @keliang-ui/play storybook",
+    "docs:dev": "pnpm --filter @keliang-ui/docs dev",
+    "docs:build": "pnpm --filter @keliang-ui/docs build",
+    "docs:preview": "pnpm --filter @keliang-ui/docs preview",
+    "test": "pnpm --filter @keliang-ui/components test",
+    "build": "pnpm --filter keliang-ui build"
   },
   "keywords": [
     "fs",
@@ -43,11 +43,11 @@
     "vue-tsc": "^1.8.27"
   },
   "dependencies": {
-    "@fs-ui/components": "workspace:*",
-    "@fs-ui/hooks": "workspace:*",
-    "@fs-ui/theme": "workspace:*",
-    "@fs-ui/utils": "workspace:*",
-    "fs-ui": "workspace:*",
+    "@keliang-ui/components": "workspace:*",
+    "@keliang-ui/hooks": "workspace:*",
+    "@keliang-ui/theme": "workspace:*",
+    "@keliang-ui/utils": "workspace:*",
+    "keliang-ui": "workspace:*",
     "lodash-es": "^4.17.21",
     "vue": "^3.4.19"
   }

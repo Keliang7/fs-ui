@@ -1,5 +1,5 @@
 import Icon from "./Icon.vue";
-import { withInstall } from "@fs-ui/utils";
+import { withInstall } from "@keliang-ui/utils";
 
 export const FsIcon = withInstall(Icon);
 

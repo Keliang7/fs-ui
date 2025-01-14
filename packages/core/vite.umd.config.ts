@@ -8,7 +8,7 @@ export default defineConfig({
     outDir: "dist/umd",
     lib: {
       entry: resolve(__dirname, "./index.ts"),
-      name: "FsUI",
+      name: "KeliangUI",
       fileName: "index",
       formats: ["umd"],
     },
