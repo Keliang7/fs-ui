@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FsIcon, FsButton } from "fs-ui";
+import { FsIcon, FsButton } from "keliang-ui";
 </script>
 
 <template>

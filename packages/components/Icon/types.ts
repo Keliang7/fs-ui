@@ -1,6 +1,9 @@
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 export interface IconProps {
+  /**
+   * @description 边框
+   */
   border?: boolean;
   fixedWidth?: boolean;
   flip?: "horizontal" | "vertical" | "both";

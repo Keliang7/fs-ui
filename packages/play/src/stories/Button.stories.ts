@@ -2,8 +2,8 @@ import type { Meta, StoryObj, ArgTypes } from "@storybook/vue3";
 import { fn, within, userEvent, expect, clearAllMocks } from "@storybook/test";
 import { set } from "lodash-es";
 
-import { FsButton, FsButtonGroup } from "fs-ui";
-import "fs-ui/dist/index.css";
+import { FsButton, FsButtonGroup } from "keliang-ui";
+import "keliang-ui/dist/index.css";
 
 type Story = StoryObj<typeof FsButton> & { argTypes?: ArgTypes };
 
